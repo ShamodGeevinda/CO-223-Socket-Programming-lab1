@@ -15,12 +15,17 @@ s.bind((Host, Port))
 # no of clients to connect
 s.listen(5)
 
+
 while True:
     # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-
-    #printing msg in server side
     print(f"Connection from {address} has been established.")
 
-    #closing the socket
+    # receiving messaage from client socket
+    msg = clientsocket.recv(1024)
+
+    # sending the same message to client 
+    clientsocket.send(msg)
+
+    # closing the client socket
     clientsocket.close()

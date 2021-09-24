@@ -1,6 +1,7 @@
 import socket
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((socket.gethostname(), 1234))
+#making client socket
+c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+c.connect((socket.gethostname(), 1234))
 
 
