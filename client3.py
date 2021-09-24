@@ -14,4 +14,4 @@ c.send(cmsg.encode())
 msg = c.recv(1024)
 
 # printing the server reply after decoding
-print(msg.decode())
+print("This is the echo: "+msg.decode())
